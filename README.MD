@@ -4,8 +4,9 @@
 
 ## 使用说明
 
-- 请自行构建代码，```Releases```下可执行文件<font color="#ff0000">仅提供了</font>根据``addr.txt``文件进行质押的操作
+~~请自行构建代码，```Releases```下可执行文件<font color="#ff0000">仅提供了</font>根据``addr.txt``文件进行质押的操作~~
 
+## 为防止私钥相关纠纷，已删除release。需要使用的请自行研究并编译代码
 
 在 ```config.conf``` 下输入填入需要签名的私钥 ( 执行合约操作的私钥 ) 与 Polygon的RPC地址
 
