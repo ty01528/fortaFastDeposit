@@ -12,7 +12,8 @@ import (
 	"math/big"
 )
 
-func Deposit(spenderAddress *big.Int) (res string) {
+func Deposit(addressSub string) (res string) {
+	spenderAddress, _ := new(big.Int).SetString(addressSub, 16)
 	// 连接rpc客户端
 	client, err := ethclient.Dial(rpcClient)
 	if err != nil {
@@ -68,7 +69,7 @@ func Deposit(spenderAddress *big.Int) (res string) {
 		println(contractRes)
 		res = contractRes
 	} else {
-		contractRes := fmt.Sprintln("账户:", spenderAddress.String(), "质押成功! 交易哈希为：", tx.Hash().String())
+		contractRes := fmt.Sprintln("解析地址:", spenderAddress.String(), "质押成功! 交易哈希为：", tx.Hash().String())
 		println(contractRes)
 		res = contractRes
 	}
