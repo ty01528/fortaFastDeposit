@@ -16,4 +16,6 @@
 确保以上三个文件在同一目录下，双击```main.exe```执行
 或者也可以使用  ```main.exe -f 地址文件路径 -c 配置文件路径``` 执行
 
+## 为防止网络拥堵，默认1s提交一个！！！
+### 运行结果示例
 ![image](https://user-images.githubusercontent.com/95566315/187038613-acf89e68-e974-4b06-84aa-3bb4ab4494fb.png)
