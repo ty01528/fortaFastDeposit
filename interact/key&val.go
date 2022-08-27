@@ -14,9 +14,11 @@ var (
 	gasLimit            uint64
 )
 
-// ReadConfig 用于将config中配置信息解析成MAP格式
-func ReadConfig() {
+func ReadConfig(filename string) {
 	conf, err := config.NewConfig("ini", "config.conf")
+	if filename != "" {
+		conf, err = config.NewConfig("ini", filename)
+	}
 	if err != nil {
 		log.Print("config read error!")
 		log.Println(err)

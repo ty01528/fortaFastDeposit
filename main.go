@@ -7,8 +7,10 @@ import (
 
 func main() {
 	var fileAddr string
-	flag.StringVar(&fileAddr, "f", "", "批量部署的文件地址")
-	interact.ReadConfig()
+	var configAddr string
+	flag.StringVar(&fileAddr, "f", "", "批量部署的txt文件路径")
+	flag.StringVar(&configAddr, "c", "", "配置文件路径")
+	interact.ReadConfig(configAddr)
 	if fileAddr != "" {
 		interact.DepositFromFile(fileAddr)
 	} else {
