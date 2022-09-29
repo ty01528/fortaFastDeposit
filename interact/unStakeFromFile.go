@@ -104,7 +104,7 @@ func unStake(addressSub string) (res string) {
 		println(contractRes)
 		res = contractRes
 	} else {
-		contractRes := fmt.Sprintln("解析地址:", addressSub, "质押成功! 交易哈希为：", tx.Hash().String())
+		contractRes := fmt.Sprintln("地址:", addressSub, "解除质押成功! 交易哈希为：", tx.Hash().String())
 		println(contractRes)
 		res = contractRes
 	}
